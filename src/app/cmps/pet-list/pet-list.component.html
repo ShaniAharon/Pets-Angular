@@ -1,1 +1,3 @@
-<p>pet-list works!</p>
+<section class="pet=list">
+    <pet-preview (onSelect)="onSelect.emit($event)" *ngFor="let pet of pets" [pet]="pet"></pet-preview>    
+</section>
