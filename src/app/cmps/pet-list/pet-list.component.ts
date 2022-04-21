@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Pet } from 'src/app/models/pet.model';
 
 @Component({
-  selector: 'app-pet-list',
+  selector: 'pet-list',
   templateUrl: './pet-list.component.html',
   styleUrls: ['./pet-list.component.scss']
 })
