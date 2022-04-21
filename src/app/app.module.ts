@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PetAppComponent } from './pages/pet-app/pet-app.component';
 import { PetListComponent } from './cmps/pet-list/pet-list.component';
 import { PetPreviewComponent } from './cmps/pet-preview/pet-preview.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PetPreviewComponent } from './cmps/pet-preview/pet-preview.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule // must add it for the list render to work ajax calls
   ],
   providers: [],
   bootstrap: [AppComponent]
