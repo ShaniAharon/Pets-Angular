@@ -1,4 +1,7 @@
 <section class="pet-app">
+    <pet-details (onBack)="selectedPetId=null" *ngIf="selectedPetId; else petList" [petId]="selectedPetId"></pet-details>
+<ng-template #petList>
     <pet-filter></pet-filter>
  <pet-list (onSelect)="selectedPetId=$event" [pets]="pets$|async"></pet-list>
+</ng-template>
 </section>

@@ -9,6 +9,7 @@ import { PetPreviewComponent } from './cmps/pet-preview/pet-preview.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PetFilterComponent } from './cmps/pet-filter/pet-filter.component';
 import { FormsModule } from '@angular/forms';
+import { PetDetailsComponent } from './pages/pet-details/pet-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     PetAppComponent,
     PetListComponent,
     PetPreviewComponent,
-    PetFilterComponent
+    PetFilterComponent,
+    PetDetailsComponent
   ],
   imports: [
     BrowserModule,
