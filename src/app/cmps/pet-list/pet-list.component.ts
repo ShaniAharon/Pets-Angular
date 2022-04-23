@@ -8,6 +8,7 @@ import { Pet } from 'src/app/models/pet.model';
 })
 export class PetListComponent implements OnInit {
   @Input() pets: Pet[] = [] // prop
+  @Output() onRemove = new EventEmitter<string>() // emit
   constructor() { }
 
   ngOnInit(): void {

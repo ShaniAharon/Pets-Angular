@@ -6,6 +6,6 @@
   </section>
   <section (click)="$event.stopPropagation()" class="actions">
     <a [routerLink]="['edit', pet._id]">Edit</a>
-    <!-- add remove here -->
+    <button (click)="onRemove.emit(pet._id)" class="remove-btn">X</button>
   </section>
 </section>

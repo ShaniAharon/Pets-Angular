@@ -5,6 +5,6 @@
     [petId]="selectedPetId"
   ></pet-details> -->
   <pet-filter></pet-filter>
-  <pet-list [pets]="pets$ | async"></pet-list>
+  <pet-list (onRemove)="onRemovePet($event)" [pets]="pets$ | async"></pet-list>
   <router-outlet></router-outlet>
 </section>

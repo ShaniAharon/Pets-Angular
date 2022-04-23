@@ -8,7 +8,7 @@ import { Pet } from 'src/app/models/pet.model';
 })
 export class PetPreviewComponent implements OnInit {
   @Input() pet!: Pet
-  @Output() onSelect = new EventEmitter<string>()
+  @Output() onRemove = new EventEmitter<string>()
   constructor() { }
 
   ngOnInit(): void {

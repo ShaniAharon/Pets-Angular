@@ -1,3 +1,7 @@
 <section class="pet-list">
-  <pet-preview *ngFor="let pet of pets" [pet]="pet"></pet-preview>
+  <pet-preview
+    (onRemove)="onRemove.emit($event)"
+    *ngFor="let pet of pets"
+    [pet]="pet"
+  ></pet-preview>
 </section>

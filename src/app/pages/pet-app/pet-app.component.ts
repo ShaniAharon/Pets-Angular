@@ -36,6 +36,10 @@ export class PetAppComponent implements OnInit {
     // } ,1000)
   }
 
+  onRemovePet(petId:string){
+    this.petService.remove(petId)
+  }
+  
   ngOnDestroy(): void {
     // this.subscription.unsubscribe()
   }
