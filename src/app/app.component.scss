@@ -4,14 +4,6 @@
   display: flex;
   flex-direction: column;
 
-  header {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    background-color: #4caf;
-    margin-bottom: 30px;
-  }
-
   main {
     flex-grow: 1;
   }

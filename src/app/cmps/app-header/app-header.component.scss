@@ -1,0 +1,22 @@
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #4caf50;
+  margin-bottom: 30px;
+  .logo {
+    flex-grow: 1;
+    font-size: 1.2em;
+  }
+
+  .app-nav {
+    display: flex;
+    gap: 10px;
+    &:last-child {
+      margin-right: 15px;
+    }
+    a.active {
+      color: wheat;
+    }
+  }
+}

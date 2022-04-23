@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PetFilterComponent } from './cmps/pet-filter/pet-filter.component';
 import { FormsModule } from '@angular/forms';
 import { PetDetailsComponent } from './pages/pet-details/pet-details.component';
+import { AboutComponent } from './pages/about/about.component';
+import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PetDetailsComponent } from './pages/pet-details/pet-details.component';
     PetListComponent,
     PetPreviewComponent,
     PetFilterComponent,
-    PetDetailsComponent
+    PetDetailsComponent,
+    AboutComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,

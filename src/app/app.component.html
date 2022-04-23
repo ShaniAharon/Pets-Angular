@@ -1,11 +1,8 @@
 <section class="app-container">
- <header class="container">
-   <h1 class="logo">Pets</h1>
- </header>
- <main class="container">
-   <pet-app></pet-app>
- </main>
- <footer class="container">
-    PetsRights &copy;
- </footer>
+  <app-header></app-header>
+  <main class="container">
+    <!-- need this to see the routes when we change -->
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="container">PetsRights &copy;</footer>
 </section>
