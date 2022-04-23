@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { firstValueFrom, Observable, Subscription } from 'rxjs';
 import { Pet } from 'src/app/models/pet.model';
 import { PetService } from 'src/app/services/pet.service';
 
@@ -10,17 +11,21 @@ import { PetService } from 'src/app/services/pet.service';
 })
 export class PetDetailsComponent implements OnInit {
   
-  @Input() petId: string
-  @Output() onBack = new EventEmitter()
+  // @Input() petId: string
+  // @Output() onBack = new EventEmitter()
+  subscription: Subscription
   pet: Pet
   answer: string
   answer$: Observable<string> | Promise<string>
   
-  constructor(private petService: PetService) { }
+  constructor(private petService: PetService, private route: ActivatedRoute, private router:Router) { }
 
  async  ngOnInit(): Promise<void> {
-   const pet = await this.petService.getById(this.petId).toPromise()
-   this.pet = pet 
+   this.subscription = this.route.params.subscribe(async params => {
+     //test firstValueFrom instead of toPromise
+     const pet = await firstValueFrom(this.petService.getById(params['id']), {defaultValue: undefined})
+     this.pet = pet;
+   })
   }
 
   onShouldAdopt() {
@@ -30,4 +35,7 @@ export class PetDetailsComponent implements OnInit {
     // })
   }
 
+  onBack() {
+    this.router.navigateByUrl('')
+  }
 }

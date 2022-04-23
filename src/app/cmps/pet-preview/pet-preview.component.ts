@@ -14,9 +14,6 @@ export class PetPreviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSelectPet() {
-    console.log('select pet');
-    this.onSelect.emit(this.pet._id)
-  }
+  
 
 }

@@ -1,11 +1,11 @@
 <section *ngIf="pet" class="pet-details">
-    <img src="https://robohash.org/{{pet._id}}?set=set4" alt="cat">
-    <h1>{{pet.name}}</h1>
-    <p>Age: {{pet.age}}</p>
-    <p>Birth Date: {{pet.birthDate|date:'dd/MM/yy'}}</p>
-    <button (click)="onBack.emit()">Back</button>
- <section>
-     <button (click)="onShouldAdopt()">Should Adopet a Pet?</button>
-     <span>{{answer$|async}}</span>
- </section>
+  <img src="https://robohash.org/{{ pet._id }}?set=set4" alt="cat" />
+  <h1>{{ pet.name }}</h1>
+  <p>Age: {{ pet.age }}</p>
+  <p>Birth Date: {{ pet.birthDate | date: "dd/MM/yy" }}</p>
+  <button (click)="onBack()">Back</button>
+  <section>
+    <button (click)="onShouldAdopt()">Should Adopet a Pet?</button>
+    <span>{{ answer$ | async }}</span>
+  </section>
 </section>

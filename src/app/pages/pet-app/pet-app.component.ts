@@ -13,7 +13,6 @@ export class PetAppComponent implements OnInit {
   pets: Pet[]
   pets$: Observable<Pet[]>
   subscription: Subscription
-  selectedPetId: string
 
   
   msg = new Promise(resolve => {
