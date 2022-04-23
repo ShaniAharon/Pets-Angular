@@ -1,0 +1,22 @@
+<section class="pet-edit">
+  <h1>Add Pet</h1>
+  <form *ngIf="pet" (ngSubmit)="onSavePet()">
+    <label for="name">Name</label>
+    <input [(ngModel)]="pet.name" type="text" name="name" id="name" />
+
+    <label for="age">Age</label>
+    <input [(ngModel)]="pet.age" type="number" name="age" id="age" />
+
+    <label for="birthDate">Birth Date</label>
+    <!-- need to foramt the date with pipe soo we could see it in the modal date value -->
+    <input
+      [ngModel]="pet.birthDate | date: 'yyyy-MM-dd'"
+      (ngModelChange)="pet.birthDate = $event"
+      type="date"
+      name="birthDate"
+      id="birthDate"
+    />
+
+    <button>Save</button>
+  </form>
+</section>

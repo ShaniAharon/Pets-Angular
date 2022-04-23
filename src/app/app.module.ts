@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { PetDetailsComponent } from './pages/pet-details/pet-details.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
+import { PetEditComponent } from './pages/pet-edit/pet-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AppHeaderComponent } from './cmps/app-header/app-header.component';
     PetFilterComponent,
     PetDetailsComponent,
     AboutComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    PetEditComponent
   ],
   imports: [
     BrowserModule,

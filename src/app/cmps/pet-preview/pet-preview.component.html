@@ -4,4 +4,8 @@
     <p>Name: {{ pet.name }}</p>
     <p>Age: {{ pet.age }}</p>
   </section>
+  <section (click)="$event.stopPropagation()" class="actions">
+    <a [routerLink]="['edit', pet._id]">Edit</a>
+    <!-- add remove here -->
+  </section>
 </section>
