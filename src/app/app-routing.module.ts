@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: 'pet/:id', component: PetDetailsComponent, resolve: {pet: PetResolverService}, canActivate: [AuthGuard]},
   {path: 'about', component:AboutComponent},
   {path: '', component:PetAppComponent, children: [
-    {path: 'edit/:id', component: PetEditComponent},
-    {path: 'edit', component: PetEditComponent}
+    {path: 'edit/:id', component: PetEditComponent, resolve: {pet: PetResolverService}},
+    {path: 'edit', component: PetEditComponent, resolve: {pet: PetResolverService}}
   ]}
 
 ];

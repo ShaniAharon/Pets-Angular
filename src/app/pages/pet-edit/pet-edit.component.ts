@@ -15,10 +15,14 @@ export class PetEditComponent implements OnInit {
   constructor(private petService: PetService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    //no resolver way
-    this.route.params.subscribe(async({id})=> {
-      this.pet = id ? await firstValueFrom(this.petService.getById(id), {defaultValue: undefined}) : this.petService.getEmptyPet() as Pet
+    //with resolver
+    this.route.data.subscribe(({pet}) => {
+      this.pet = pet._id ? pet : this.petService.getEmptyPet() as Pet
     })
+    // //no resolver way
+    // this.route.params.subscribe(async({id})=> {
+    //   this.pet = id ? await firstValueFrom(this.petService.getById(id), {defaultValue: undefined}) : this.petService.getEmptyPet() as Pet
+    // })
   }
 
   async onSavePet() {
