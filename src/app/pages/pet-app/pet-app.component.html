@@ -5,6 +5,7 @@
     [petId]="selectedPetId"
   ></pet-details> -->
   <pet-filter></pet-filter>
+  <a routerLink="edit">Add pet</a>
   <pet-list (onRemove)="onRemovePet($event)" [pets]="pets$ | async"></pet-list>
   <router-outlet></router-outlet>
 </section>
