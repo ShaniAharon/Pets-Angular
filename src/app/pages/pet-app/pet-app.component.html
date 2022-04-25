@@ -1,9 +1,4 @@
 <section class="pet-app">
-  <!-- <pet-details
-    (onBack)="selectedPetId = null"
-    *ngIf="selectedPetId; else petList"
-    [petId]="selectedPetId"
-  ></pet-details> can remove this-->
   <pet-filter></pet-filter>
   <a routerLink="edit">Add pet</a>
   <pet-list (onRemove)="onRemovePet($event)" [pets]="pets$ | async"></pet-list>
